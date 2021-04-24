@@ -56,7 +56,6 @@ document.querySelector("#start_chat").addEventListener("click", (event) => {
     socket.on("admin_send_to_client", message => {
         socket_admin_id = message.socket_id;
         
-        console.log("socket_admin_id", socket_admin_id);
         const template_admin = document.getElementById("admin-template").innerHTML;
 
         const rendered = Mustache.render(template_admin, {
